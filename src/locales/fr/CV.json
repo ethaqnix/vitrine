@@ -1,0 +1,23 @@
+{
+  "test": "HELLO THERE",
+  "Formations": {
+    "title": "Formations",
+    "BTS": {
+      "title": "BTS IRIS",
+      "date": "août 2013 - juillet 2015",
+      "description": "J'y ai découvert de développement en C, C++ et le HTML/CSS"
+    },
+    "epitech": {
+      "title": "Epitech",
+      "date": "Octobre 2015 - Octobre 2019",
+      "decription": "Durant les première année, j'ai amélioré mes compétences globale en développement (C/C++/python). J'ai concentré les année suivante au développement javascript, notamment ReactJs et Angular2."
+    }
+  },
+  "Projetcs": {
+    "title": "Projects",
+    "O-rizon": {},
+    "scalpel": {},
+    "agenz": {},
+    "flow": {}
+  }
+}

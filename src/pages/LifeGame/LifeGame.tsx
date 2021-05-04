@@ -1,29 +1,28 @@
-import { Button } from '@material-ui/core';
-import { withStyles } from '@material-ui/styles';
-import React from 'react';
-import Rules from './Rules';
-import Grid from '../../utils/SVGCreator/SVGGrid';
-
+import { Button } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
+import React from "react";
+import Rules from "./Rules";
+import Grid from "../../utils/SVGCreator/SVGGrid";
 
 interface OwnProps {
-  classes: any,
+  classes: any;
 }
 
 interface OwnState {
   intervalId: any;
-  valuesArray: number[][],
-  nbLines: number,
-  nbRows: number,
+  valuesArray: number[][];
+  nbLines: number;
+  nbRows: number;
   rules: Array<{
-    pattern: [number, number, number],
-    result: 0 | 1,
-  }>
+    pattern: [number, number, number];
+    result: 0 | 1;
+  }>;
 }
 
 type Props = OwnProps;
 
 class LifeGame extends React.Component<Props, OwnState> {
-  constructor(props: Props) {
+  /*constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -144,15 +143,18 @@ class LifeGame extends React.Component<Props, OwnState> {
         </svg>
       </div>
     );
+  }*/
+  render() {
+    return null;
   }
 }
 
 const styles = {
   root: {
     margin: 10,
-    display: 'flex',
-    width: '600',
-    height: '400',
+    display: "flex",
+    width: "600",
+    height: "400",
     flex: 1,
   },
   rules: {
@@ -161,8 +163,8 @@ const styles = {
   },
   svgGrid: {
     flex: 2,
-    justifyContent: '',
-  }
+    justifyContent: "",
+  },
 };
 
 export default withStyles(styles)(LifeGame);
