@@ -1,12 +1,11 @@
 import React, { FunctionComponent } from "react";
 import { useLifeGame } from "../../context/lifeGameContext";
 import { setBoard } from "../../context/lifeGameContext/actions";
-import { LifeGameState } from "../../context/lifeGameContext/types";
 import { usePageStyles } from "../../styles/pages";
 import SVGGrid from "../../utils/SVGCreator/SVGGrid";
 
 type OwnProps = {
-  changeSquareColorOnClick: boolean;
+  changeSquareColorOnClick?: boolean;
 };
 
 const Grid: FunctionComponent<OwnProps> = ({ changeSquareColorOnClick }) => {
@@ -14,15 +13,16 @@ const Grid: FunctionComponent<OwnProps> = ({ changeSquareColorOnClick }) => {
   const classes = usePageStyles();
 
   const handleSquareClick = (x: number, y: number) => {
-    setBoard(setLifeGame, [
-      ...board.slice(0, x),
-      [
-        ...board[x].slice(0, y),
-        board[x][y] === true ? false : true,
-        ...board[x].slice(y + 1),
-      ],
-      ...board.slice(x + 1),
-    ]);
+    setLifeGame &&
+      setBoard(setLifeGame, [
+        ...board.slice(0, x),
+        [
+          ...board[x].slice(0, y),
+          board[x][y] === true ? false : true,
+          ...board[x].slice(y + 1),
+        ],
+        ...board.slice(x + 1),
+      ]);
   };
 
   return (

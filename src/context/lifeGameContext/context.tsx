@@ -1,9 +1,9 @@
-import React, { FunctionComponent, useReducer } from "react";
+import React, { useReducer } from "react";
 import {
   initialState as initialLifeGameState,
   LifeGameReducer,
 } from "./reducer";
-import { ILifeGameAction, LifeGameContextProps, LifeGameState } from "./types";
+import { ILifeGameAction, LifeGameState } from "./types";
 
 const LifeGameStateContext = React.createContext<LifeGameState>(
   initialLifeGameState

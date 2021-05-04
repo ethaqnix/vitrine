@@ -1,11 +1,10 @@
-import { Button, makeStyles, Theme } from "@material-ui/core";
-import React, { FunctionComponent, useState } from "react";
-import { useLifeGame } from "../../context/lifeGameContext";
-import { playLifeGame } from "../../context/lifeGameContext/actions";
-import { Board } from "../../context/lifeGameContext/types";
-import { usePageStyles } from "../../styles/pages";
-import Grid from "./Grid";
-
+import { Button } from "@material-ui/core";
+import React, { FunctionComponent } from "react";
+import { useLifeGame } from "../../../context/lifeGameContext";
+import { playLifeGame } from "../../../context/lifeGameContext/actions";
+import { Board } from "../../../context/lifeGameContext/types";
+import { usePageStyles } from "../../../styles/pages";
+import Grid from "../Grid";
 interface OwnProps {}
 
 const LifeGame: FunctionComponent<OwnProps> = () => {
@@ -45,13 +44,12 @@ const LifeGame: FunctionComponent<OwnProps> = () => {
     });
 
   const play = () => {
-    playLifeGame(setLifeGame, executePatern);
+    setLifeGame && playLifeGame(setLifeGame, executePatern);
   };
 
   return (
     <div className={classes.root}>
       <div className={classes.rules}>
-        {/*<PlayControls execute={executePatern} />*/}
         <Button variant="contained" onClick={play}>
           {"Play"}
         </Button>

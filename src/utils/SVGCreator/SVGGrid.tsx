@@ -64,11 +64,19 @@ class SVGGrid extends React.Component<Props, OwnState> {
           />
         ))
       ),
-      horizontalLineArray.map((line) => (
-        <SVGLine pointA={line.pointA} pointB={line.pointB} />
+      horizontalLineArray.map((line, i) => (
+        <SVGLine
+          key={`horizontal-svg-line-${i}`}
+          pointA={line.pointA}
+          pointB={line.pointB}
+        />
       )),
-      verticalLineArray.map((line) => (
-        <SVGLine pointA={line.pointA} pointB={line.pointB} />
+      verticalLineArray.map((line, i) => (
+        <SVGLine
+          key={`vertical-svg-line-${i}`}
+          pointA={line.pointA}
+          pointB={line.pointB}
+        />
       )),
     ];
   }

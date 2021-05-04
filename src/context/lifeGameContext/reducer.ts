@@ -32,6 +32,12 @@ export const LifeGameReducer = (
         board: action.payload(state.board),
       };
     }
+    case "SET_DIMENSIONS": {
+      return {
+        ...state,
+        dimensions: action.payload,
+      };
+    }
     case "CLEAR": {
       return {
         ...state,

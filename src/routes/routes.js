@@ -1,7 +1,6 @@
 import NotFound from "../pages/NotFound";
 import MandelbrotCircle from "../pages/MandelbrotCircle/MandelbrotCircle";
-import LifeGame from "../pages/LifeGame/LifeGame";
-import LifeGame2d from "../pages/LifeGame2d";
+import LifeGame from "../pages/LifeGame2d";
 import CV from "../pages/CV";
 
 const routes = [
@@ -29,7 +28,7 @@ const routes = [
   {
     title: "LifeGame2d",
     path: "/LifeGame2d",
-    component: LifeGame2d,
+    component: LifeGame,
     isPrivate: false,
     onMenu: true,
   },

@@ -5,29 +5,34 @@ export type LifeGameState = {
   dimensions: [number, number];
 };
 
-export type ILifeGamePlayAction = {
+export interface ILifeGamePlayAction {
   type: "PLAY";
   payload(board: Board): Board;
-};
+}
 
-export type ILifeGamePauseAction = {
+export interface ILifeGamePauseAction {
   type: "PLAY";
   payload(board: Board): Board;
-};
+}
 
-export type ILifeGameSetBoardAction = {
+export interface ILifeGameSetBoardAction {
   type: "SET_BOARD";
   payload: Board;
-};
+}
 
-export type ILifeGameClearAction = {
+export interface ILifeGameClearAction {
   type: "CLEAR";
-};
+}
+
+export interface ILifeGameSetDimensionsAction {
+  type: "SET_DIMENSIONS";
+  payload: [number, number];
+}
 
 export type ILifeGameAction =
   | ILifeGamePlayAction
   | ILifeGameSetBoardAction
   | ILifeGameClearAction
-  | null;
+  | ILifeGameSetDimensionsAction;
 
 export type LifeGameContextProps = {};
