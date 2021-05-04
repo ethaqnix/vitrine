@@ -11,11 +11,9 @@ export const usePageStyles = makeStyles((theme: Theme) => ({
   rules: {
     flex: 1,
     height: "400px",
-    backgroundColor: "aliceblue",
   },
   renderArea: {
     flex: 2,
     justifyContent: "",
-    backgroundColor: "blue",
   },
 }));

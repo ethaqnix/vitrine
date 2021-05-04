@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 
 type OwnProps = {};
 
-const Formations: FunctionComponent<OwnProps> = ({}) => {
-  const { t, i18n } = useTranslation("CV");
+const Formations: FunctionComponent<OwnProps> = () => {
+  const { t } = useTranslation("CV");
 
   return (
     <Section

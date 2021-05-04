@@ -24,9 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 type OwnProps = {};
 
-const About: FunctionComponent<OwnProps> = ({}) => {
-  console.log("plop");
-
+const About: FunctionComponent<OwnProps> = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

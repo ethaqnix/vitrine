@@ -1,3 +1,7 @@
 import CV from "./CV.json";
 
-export default { CV };
+const translations = {
+  CV,
+};
+
+export default translations;

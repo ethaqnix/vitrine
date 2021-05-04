@@ -1,6 +1,4 @@
-import React, { FunctionComponent, ReactElement } from "react";
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-import { PDFViewer } from "@react-pdf/renderer";
+import React, { FunctionComponent } from "react";
 import Experiences from "./Experiences";
 import Education from "./Education";
 import Skills from "./Skills";
@@ -26,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 type OwnProps = {};
 
-const CV: FunctionComponent<OwnProps> = ({}) => {
+const CV: FunctionComponent<OwnProps> = () => {
   console.log("HELLO");
 
   const classes = useStyles();

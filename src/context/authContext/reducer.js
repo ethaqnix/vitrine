@@ -1,5 +1,3 @@
-import React, { useState, useReducer } from "react";
-
 let username = localStorage.getItem("currentUser")
   ? JSON.parse(localStorage.getItem("currentUser")).username
   : "";

@@ -1,6 +1,6 @@
-import { SvgIcon, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import React, { FunctionComponent, useEffect, useState } from "react";
+import React, { FunctionComponent } from "react";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -59,7 +59,7 @@ const Section: FunctionComponent<OwnProps> = ({
         {contents.map((content: Content | React.ReactElement) => {
           if (React.isValidElement(content)) {
             return content;
-          } else if (content) {
+          } else {
             return (
               <div>
                 <div className={classes.subTitle}>

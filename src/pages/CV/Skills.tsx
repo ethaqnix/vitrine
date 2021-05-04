@@ -1,9 +1,6 @@
-import { makeStyles, Theme } from "@material-ui/core";
 import React, { FunctionComponent } from "react";
 import Section from "./Section";
 import ExperienceIcon from "./icons/ExperienceIcon";
-
-const useStyles = makeStyles((theme: Theme) => ({}));
 
 type OwnProps = {};
 
@@ -13,8 +10,7 @@ const content = {
   icon: ExperienceIcon,
 };
 
-const Skills: FunctionComponent<OwnProps> = ({}) => {
-  const classes = useStyles();
+const Skills: FunctionComponent<OwnProps> = () => {
   return <Section {...content} />;
 };
 

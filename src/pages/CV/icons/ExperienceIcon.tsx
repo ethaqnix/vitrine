@@ -1,4 +1,3 @@
-import { makeStyles, Theme } from "@material-ui/core";
 import { FunctionComponent } from "react";
 
 type OwnProps = {
