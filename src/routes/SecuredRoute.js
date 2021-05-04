@@ -4,7 +4,7 @@ import Page from "../layout/Page";
 const SecuredRoute = ({ component: Component, title, isPrivate, ...rest }) => {
   return (
     <Page title={title}>
-      <Component {...rest} />;
+      <Component {...rest} />
     </Page>
   );
 };

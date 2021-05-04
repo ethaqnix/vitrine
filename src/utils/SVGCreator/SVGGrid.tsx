@@ -4,7 +4,7 @@ import SVGLine from "./SVGLine";
 interface OwnProps {
   nbLines: number;
   nbRows?: number;
-  valuesArray: number[][];
+  valuesArray: boolean[][];
   filledColor?: any;
   onClickSquare?(x: number, y: number): void;
 }
@@ -51,15 +51,15 @@ class SVGGrid extends React.Component<Props, OwnState> {
     };
 
     return [
-      valuesArray.map((line: number[], i: number) =>
-        line.map((item: number, j: number) => (
+      valuesArray.map((line: boolean[], i: number) =>
+        line.map((item: boolean, j: number) => (
           <rect
             key={`square${j}/${i}`}
             x={j * (1000 / nbRows)}
             y={i * (1000 / nbLines)}
             width={1000 / nbRows}
             height={1000 / nbLines}
-            fill={item === 1 ? filledColor || "#000000" : "#FFFFFF"}
+            fill={item ? filledColor || "#000000" : "#FFFFFF"}
             onClick={handleSquareClick(i, j)}
           />
         ))
