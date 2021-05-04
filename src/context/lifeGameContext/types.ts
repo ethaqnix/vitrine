@@ -29,10 +29,16 @@ export interface ILifeGameSetDimensionsAction {
   payload: [number, number];
 }
 
+export interface ILifeGameSetPatternAction {
+  type: "SET_PATTERN";
+  payload: boolean[][];
+}
+
 export type ILifeGameAction =
   | ILifeGamePlayAction
   | ILifeGameSetBoardAction
   | ILifeGameClearAction
-  | ILifeGameSetDimensionsAction;
+  | ILifeGameSetDimensionsAction
+  | ILifeGameSetPatternAction;
 
 export type LifeGameContextProps = {};

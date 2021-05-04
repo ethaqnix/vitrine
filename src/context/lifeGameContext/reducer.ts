@@ -1,3 +1,4 @@
+import { SetMockPattern } from "./transformers";
 import { ILifeGameAction, LifeGameState } from "./types";
 
 export const initial1dState: LifeGameState = {
@@ -37,6 +38,9 @@ export const LifeGameReducer = (
         ...state,
         dimensions: action.payload,
       };
+    }
+    case "SET_PATTERN": {
+      return SetMockPattern(state, action.payload);
     }
     case "CLEAR": {
       return {

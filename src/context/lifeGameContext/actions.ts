@@ -1,5 +1,5 @@
 import { Dispatch } from "react";
-import { Board, ILifeGamePlayAction } from "./types";
+import { Board, ILifeGamePlayAction, ILifeGameSetPatternAction } from "./types";
 import { ILifeGameSetDimensionsAction, ILifeGameSetBoardAction } from "./types";
 
 export const playLifeGame = async (
@@ -14,6 +14,13 @@ export const setBoardDimensions = async (
   payload: [number, number]
 ) => {
   dispatch({ type: "SET_DIMENSIONS", payload });
+};
+
+export const setPattern = (
+  dispatch: Dispatch<ILifeGameSetPatternAction>,
+  payload: Board
+) => {
+  dispatch({ type: "SET_PATTERN", payload });
 };
 
 export const setBoard = async (

@@ -1,10 +1,15 @@
-import { Button } from "@material-ui/core";
+import { Button, MenuItem, Select } from "@material-ui/core";
 import React, { FunctionComponent } from "react";
 import { useLifeGame } from "../../../context/lifeGameContext";
-import { playLifeGame } from "../../../context/lifeGameContext/actions";
+import {
+  playLifeGame,
+  setPattern,
+} from "../../../context/lifeGameContext/actions";
 import { Board } from "../../../context/lifeGameContext/types";
 import { usePageStyles } from "../../../styles/pages";
 import Grid from "../Grid";
+import patterns from "./json";
+
 interface OwnProps {}
 
 const LifeGame: FunctionComponent<OwnProps> = () => {
@@ -47,12 +52,29 @@ const LifeGame: FunctionComponent<OwnProps> = () => {
     setLifeGame && playLifeGame(setLifeGame, executePatern);
   };
 
+  const handlePatternSelection = (
+    event: React.ChangeEvent<{ value: unknown }>
+  ) => {
+    if (setLifeGame && event.target.value) {
+      setPattern(setLifeGame, patterns[event.target.value as string]);
+    }
+  };
+
   return (
     <div className={classes.root}>
       <div className={classes.rules}>
         <Button variant="contained" onClick={play}>
           {"Play"}
         </Button>
+        <Select onChange={handlePatternSelection}>
+          {Object.keys(patterns).map((name) => (
+            <MenuItem key={name} value={name}>
+              {name}
+            </MenuItem>
+          ))}
+        </Select>
+      </div>
+      <div className={classes.renderArea}>
         <Grid changeSquareColorOnClick={true} />
       </div>
     </div>

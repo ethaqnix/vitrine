@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { FunctionComponent, useReducer } from "react";
 import {
   initialState as initialLifeGameState,
   LifeGameReducer,
@@ -44,10 +44,9 @@ export const useLifeGame = (): [
   return [stateContext, dispatchContext];
 };
 
-export const LifeGameProvider: any = ({
-  children,
-  initialState = initialLifeGameState,
-}: any) => {
+export const LifeGameProvider: FunctionComponent<{
+  initialState: LifeGameState;
+}> = ({ children, initialState = initialLifeGameState }) => {
   const [value, dispatch] = useReducer(LifeGameReducer, initialState);
 
   return (

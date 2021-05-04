@@ -12,8 +12,6 @@ type OwnProps = {};
 
 const LifeGameIndex: FunctionComponent<OwnProps> = ({}) => {
   const history = useHistory();
-  console.log(history.location);
-
   return (
     <LifeGameProvider
       initialState={
