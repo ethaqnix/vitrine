@@ -1,9 +1,17 @@
 import NotFound from "../pages/NotFound";
 import MandelbrotCircle from "../pages/MandelbrotCircle/MandelbrotCircle";
 import LifeGame from "../pages/LifeGame/LifeGame";
-import LifeGame3d from "../pages/LifeGame2d/LifeGame2d";
+import LifeGame2d from "../pages/LifeGame2d";
+import CV from "../pages/CV";
 
 const routes = [
+  {
+    title: "CV",
+    path: "/vitrine",
+    component: CV,
+    isPrivate: false,
+    onMenu: true,
+  },
   {
     title: "Mandelbrot",
     path: "/mandelbrot",
@@ -21,7 +29,7 @@ const routes = [
   {
     title: "LifeGame2d",
     path: "/LifeGame2d",
-    component: LifeGame3d,
+    component: LifeGame2d,
     isPrivate: false,
     onMenu: true,
   },

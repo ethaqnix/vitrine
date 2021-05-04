@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import routes from "./routes/routes.js";
 import { AuthProvider } from "./context/authContext";
 import AppRoute from "./routes/AppRoute";
+import "./locales";
 
 function App() {
   return (
