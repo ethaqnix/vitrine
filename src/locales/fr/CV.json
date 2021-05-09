@@ -19,7 +19,7 @@
     }
   },
   "Experiences": {
-    "title": "Experiences",
+    "title": "Expériences",
 
     "obvious": {
       "title": "Obvious Technologies",
@@ -35,14 +35,17 @@
     "fourjs": {}
   },
   "Projects": {
-    "title": "Projects",
+    "title": "Projets",
     "orizon": {
       "title": "O-rizon",
       "date": {
         "start": "Octobre 2016",
         "end": "Juillet 2019"
       },
-      "description": "Project lancé dans le cadre des EIP, projet de fin d'étude Epitech. Il s'agit d'un espace numérique de travail orienté collège lycée ayant pour objectif d'aider l'élève dans son orientation.",
+      "description": [
+        "Project lancé dans le cadre des EIP, projet de fin d'étude Epitech.",
+        "Il s'agit d'un espace numérique de travail orienté pour les collégiens/lycéens ayant pour objectif de les aider des leur orientation."
+      ],
       "technologies": ["ReactJs", "Meteor", "MongoDB"]
     },
     "scalpel": {

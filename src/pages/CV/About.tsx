@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
   },
   avatar: {
+    overflow: "hidden",
     margin: 20,
     width: 200,
     height: 200,
@@ -28,7 +29,16 @@ const About: FunctionComponent<OwnProps> = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div className={classes.avatar} />
+      <div className={classes.avatar}>
+        <img
+          width={200}
+          height={200}
+          src={
+            "https://eip.epitech.eu/2019/o-rizon/Dist/Images/team/romain.denizot.jpg"
+          }
+          alt={"C'est moi"}
+        />
+      </div>
       <div className={classes.name}>
         <Typography variant="h4">{"Romain Denizot"}</Typography>
       </div>

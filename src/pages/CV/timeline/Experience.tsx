@@ -1,4 +1,4 @@
-import { Box, makeStyles, Paper, Theme, Typography } from "@material-ui/core";
+import { makeStyles, Paper, Theme, Typography } from "@material-ui/core";
 import {
   TimelineConnector,
   TimelineContent,
@@ -30,7 +30,10 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 type OwnProps = {
   title: string;
-  date: string;
+  date: {
+    start: string;
+    end: string;
+  };
   description: string | string[];
   icon?: any;
 };
@@ -41,8 +44,6 @@ const Experience: FunctionComponent<OwnProps> = ({
   description,
   icon,
 }) => {
-  console.log(description);
-
   const classes = useStyles();
   return (
     <TimelineItem className={classes.root}>
@@ -50,13 +51,13 @@ const Experience: FunctionComponent<OwnProps> = ({
         <Paper elevation={1} className={classes.paper}>
           <div className={classes.header}>
             <div className={classes.img}>
-              <img src={icon} height={50} />
+              <img alt={title} src={icon} height={50} />
             </div>
             <div>
               <Typography variant="h6" component="h1">
                 {title}
               </Typography>
-              <Typography>{date}</Typography>
+              <Typography variant="subtitle1">{`${date.start} - ${date.end}`}</Typography>
             </div>
           </div>
           {Array.isArray(description) ? (
@@ -75,7 +76,7 @@ const Experience: FunctionComponent<OwnProps> = ({
       </TimelineSeparator>
       <TimelineOppositeContent classes={{ root: classes.date }}>
         <Typography variant="body2" color="textSecondary">
-          {date}
+          {date.start}
         </Typography>
       </TimelineOppositeContent>
     </TimelineItem>

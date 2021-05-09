@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 type OwnProps = {
   title: string;
-  description: string;
+  description: string | string[];
   technologies: string[];
 };
 
@@ -36,7 +36,15 @@ const Project: FunctionComponent<OwnProps> = ({
             {title}
           </Typography>
           <Typography variant="subtitle2">{technologies}</Typography>
-          <Typography variant="caption">{description}</Typography>
+          {Array.isArray(description) ? (
+            description.map((e) => (
+              <div key={e}>
+                <Typography variant="caption">{e}</Typography>
+              </div>
+            ))
+          ) : (
+            <Typography variant="caption">{description}</Typography>
+          )}
         </Paper>
       </TimelineContent>
     </TimelineItem>
