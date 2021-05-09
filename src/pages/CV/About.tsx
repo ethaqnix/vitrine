@@ -3,8 +3,8 @@ import React, { FunctionComponent } from "react";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
+    height: "100%",
     display: "flex",
-    backgroundColor: "green",
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",

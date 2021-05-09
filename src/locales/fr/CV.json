@@ -1,23 +1,76 @@
 {
-  "test": "HELLO THERE",
   "Formations": {
     "title": "Formations",
     "BTS": {
       "title": "BTS IRIS",
-      "date": "août 2013 - juillet 2015",
+      "date": {
+        "start": "août 2013",
+        "end": "juillet 2015"
+      },
       "description": "J'y ai découvert de développement en C, C++ et le HTML/CSS"
     },
     "epitech": {
       "title": "Epitech",
-      "date": "Octobre 2015 - Octobre 2019",
-      "decription": "Durant les première année, j'ai amélioré mes compétences globale en développement (C/C++/python). J'ai concentré les année suivante au développement javascript, notamment ReactJs et Angular2."
+      "date": {
+        "start": "Octobre 2015",
+        "end": "juillet 2015"
+      },
+      "description": "Durant les première année, j'ai amélioré mes compétences globale en développement (C/C++/python). J'ai concentré les année suivante au développement javascript, notamment ReactJs et Angular2."
     }
   },
-  "Projetcs": {
+  "Experiences": {
+    "title": "Experiences",
+
+    "obvious": {
+      "title": "Obvious Technologies",
+      "date": {
+        "start": "Avril 2019",
+        "end": "Décembre 2020"
+      },
+      "description": [
+        "Developpeur Javascript, d'abord au poste de développeur mobile, puis développeur Full Stack.",
+        "J'y ai développer les projects Agenz, Flow ainsi qu'une interface d'administration."
+      ]
+    },
+    "fourjs": {}
+  },
+  "Projects": {
     "title": "Projects",
-    "O-rizon": {},
-    "scalpel": {},
-    "agenz": {},
-    "flow": {}
+    "orizon": {
+      "title": "O-rizon",
+      "date": {
+        "start": "Octobre 2016",
+        "end": "Juillet 2019"
+      },
+      "description": "Project lancé dans le cadre des EIP, projet de fin d'étude Epitech. Il s'agit d'un espace numérique de travail orienté collège lycée ayant pour objectif d'aider l'élève dans son orientation.",
+      "technologies": ["ReactJs", "Meteor", "MongoDB"]
+    },
+    "scalpel": {
+      "title": "Scalpel",
+      "date": {
+        "start": "Decembre 2017",
+        "end": "Juin 2018"
+      },
+      "description": "Projet réalisé dans le cadre de la 4ème année Epitech, Moteur de recherche d'image à destination des métiers du visuel.",
+      "technologies": ["Angular", "Python", "Django", "Amazon Recognizion"]
+    },
+    "agenz": {
+      "title": "Agenz",
+      "date": {
+        "start": "Avril 2019",
+        "end": "Décembre 2019"
+      },
+      "description": "",
+      "technologies": ["React Native", "Typescript"]
+    },
+    "flow": {
+      "title": "Flow",
+      "date": {
+        "start": "Janvier 2019",
+        "end": "Decembre 2020"
+      },
+      "description": "",
+      "technologies": ["React", "Node.js"]
+    }
   }
 }

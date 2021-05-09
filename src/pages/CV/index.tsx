@@ -1,10 +1,7 @@
 import React, { FunctionComponent } from "react";
-import Experiences from "./Experiences";
-import Education from "./Education";
-import Skills from "./Skills";
 import { makeStyles, Theme } from "@material-ui/core";
+import Timeline from "./timeline";
 import About from "./About";
-import Formations from "./Formations";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -16,6 +13,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     backgroundColor: "grey",
   },
+  fixed: {
+    zIndex: 1,
+    display: "flex",
+    position: "fixed",
+    width: "25%",
+    height: "100%",
+  },
   mainContent: {
     display: "flex",
     flex: 3,
@@ -25,22 +29,17 @@ const useStyles = makeStyles((theme: Theme) => ({
 type OwnProps = {};
 
 const CV: FunctionComponent<OwnProps> = () => {
-  console.log("HELLO");
-
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div className={classes.sidebar}>
-        <About />
+        <div className={classes.fixed}>
+          <About />
+        </div>
       </div>
 
       <div className={classes.mainContent}>
-        <div className="content">
-          <Formations />
-          <Experiences />
-          <Education />
-          <Skills />
-        </div>
+        <Timeline />
       </div>
     </div>
   );

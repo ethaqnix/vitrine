@@ -4,7 +4,7 @@ import React, { FunctionComponent } from "react";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    margin: theme.spacing(2),
+    backgroundColor: "grey",
     padding: theme.spacing(1),
     display: "flex",
     flexDirection: "column",
@@ -22,11 +22,21 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: "center",
   },
   icon: {
+    backgroundColor: "white",
+    padding: theme.spacing(2),
+  },
+  contents: {
+    backgroundColor: "red",
+  },
+  content: {
+    margin: theme.spacing(1),
+    backgroundColor: "blue",
+  },
+  date: {
     margin: theme.spacing(1),
   },
-  date: {},
-  contents: {},
-  content: {},
+  contentTitle: {},
+  contentDescription: {},
 }));
 
 type Content = {
@@ -61,13 +71,24 @@ const Section: FunctionComponent<OwnProps> = ({
             return content;
           } else {
             return (
-              <div>
+              <div className={classes.content}>
                 <div className={classes.subTitle}>
-                  <Typography variant="subtitle1">{`${content.title}`}</Typography>
-                  <Typography variant="subtitle2">{`${content.date}`}</Typography>
+                  <Typography
+                    className={classes.contentTitle}
+                    variant="subtitle1"
+                  >{`${content.title}`}</Typography>
+                  <Typography
+                    className={classes.date}
+                    variant="subtitle2"
+                  >{`${content.date}`}</Typography>
                 </div>
                 <div className={classes.content}>
-                  <Typography variant="caption">{content.content}</Typography>
+                  <Typography
+                    className={classes.contentDescription}
+                    variant="caption"
+                  >
+                    {content.content}
+                  </Typography>
                 </div>
               </div>
             );

@@ -10,11 +10,7 @@ const Page = ({ title, children }) => {
       }}
     >
       <Header title={title} />
-      <div
-        style={{ display: "flex", flexGrow: 1, backgroundColor: "aliceblue" }}
-      >
-        {children}
-      </div>
+      <div style={{ display: "flex", flexGrow: 1 }}>{children}</div>
     </div>
   );
 };

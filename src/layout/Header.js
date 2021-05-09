@@ -10,7 +10,9 @@ import { useHistory } from "react-router-dom";
 import Menu from "./Menu";
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  root: {
+    minHeight: 56,
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -31,7 +33,7 @@ export default function Header({ title, ...props }) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <Menu />
           {/*<IconButton

@@ -10,7 +10,7 @@ import LifeGame from "./LifeGame1d/LifeGame";
 
 type OwnProps = {};
 
-const LifeGameIndex: FunctionComponent<OwnProps> = ({}) => {
+const LifeGameIndex: FunctionComponent<OwnProps> = () => {
   const history = useHistory();
   return (
     <LifeGameProvider
