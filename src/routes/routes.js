@@ -1,6 +1,6 @@
 import NotFound from "../pages/NotFound";
 import MandelbrotCircle from "../pages/MandelbrotCircle/MandelbrotCircle";
-import LifeGame from "../pages/LifeGame2d";
+import LifeGame from "../pages/LifeGame";
 import CV from "../pages/CV";
 
 const routes = [

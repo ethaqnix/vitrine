@@ -13,7 +13,7 @@ type OwnProps = {};
 
 const MandelbrotCircle: FunctionComponent<OwnProps> = () => {
   const pageClasses = usePageStyles();
-  const [multiplierFactor, setMultiplierFactor] = useState(1);
+  const [multiplierFactor, setMultiplierFactor] = useState(2);
   const [numberOfIteration, setNumberOfIteration] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -37,7 +37,7 @@ const MandelbrotCircle: FunctionComponent<OwnProps> = () => {
   useInterval(
     () => {
       if (numberOfIteration === 2000) {
-        setMultiplierFactor(multiplierFactor + (1 % 50));
+        setMultiplierFactor((multiplierFactor + 1) % 50);
         setNumberOfIteration(2);
       } else {
         setNumberOfIteration(numberOfIteration + 1);

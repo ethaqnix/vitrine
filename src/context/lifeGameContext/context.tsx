@@ -8,9 +8,9 @@ import { ILifeGameAction, LifeGameState } from "./types";
 const LifeGameStateContext = React.createContext<LifeGameState>(
   initialLifeGameState
 );
-const LifeGameDispatchContext = React.createContext<React.Dispatch<ILifeGameAction> | null>(
-  null
-);
+const LifeGameDispatchContext = React.createContext<
+  React.Dispatch<ILifeGameAction>
+>(() => {});
 
 export function useLifeGameState() {
   const context = React.useContext(LifeGameStateContext);
@@ -34,7 +34,7 @@ export const useLifeGameDispatch = () => {
 
 export const useLifeGame = (): [
   LifeGameState,
-  React.Dispatch<ILifeGameAction> | null
+  React.Dispatch<ILifeGameAction>
 ] => {
   const stateContext = React.useContext(LifeGameStateContext);
   const dispatchContext = React.useContext(LifeGameDispatchContext);
