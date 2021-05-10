@@ -16,7 +16,7 @@ i18n.use(initReactI18next).init({
 });
 
 declare module "react-i18next" {
-  type DefaultResources = typeof resources["fr"];
+  type DefaultResources = typeof resources["fr"] | string;
   interface Resources extends DefaultResources {}
 }
 

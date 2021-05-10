@@ -9,7 +9,6 @@ import routes from "../routes/routes";
 import MenuIcon from "@material-ui/icons/Menu";
 import { IconButton } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-import { useAuthState } from "../context/authContext/context";
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -32,8 +31,7 @@ export default function Menu() {
     isOpen: false,
   });
   const history = useHistory();
-  const { password } = useAuthState();
-  const connected = Boolean(password);
+
   const toggleDrawer = (open: boolean) => (
     event: React.KeyboardEvent | React.MouseEvent
   ) => {
@@ -68,9 +66,7 @@ export default function Menu() {
         >
           <List>
             {routes
-              .filter(
-                ({ isPrivate, onMenu }) => onMenu && (!isPrivate || connected)
-              )
+              .filter(({ isPrivate, onMenu }) => onMenu && !isPrivate)
               .map(({ title, path }: any) => (
                 <ListItem
                   button

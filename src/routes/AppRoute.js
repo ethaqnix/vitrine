@@ -15,18 +15,14 @@ const AppRoutes = ({
   return (
     <Route
       path={path}
-      render={(props) =>
-        isPrivate && !Boolean(userDetails.password) ? (
-          <Redirect to={{ pathname: "/login" }} />
-        ) : (
-          <SecuredRoute
-            component={Component}
-            isPrivate={isPrivate}
-            title={title}
-            {...props}
-          />
-        )
-      }
+      render={(props) => (
+        <SecuredRoute
+          component={Component}
+          isPrivate={isPrivate}
+          title={title}
+          {...props}
+        />
+      )}
       {...rest}
     />
   );

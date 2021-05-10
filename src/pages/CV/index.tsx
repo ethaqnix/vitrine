@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import { makeStyles, Theme } from "@material-ui/core";
 import Timeline from "./timeline";
 import About from "./About";
+import Title from "../../components/Title";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -32,6 +33,7 @@ const CV: FunctionComponent<OwnProps> = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <Title title="test" />
       <div className={classes.sidebar}>
         <div className={classes.fixed}>
           <About />
